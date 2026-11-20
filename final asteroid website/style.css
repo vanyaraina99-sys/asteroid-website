@@ -1,0 +1,109 @@
+:root{--color-background: #ffffff;
+    --color-text: #000000;
+    --color-button: #D3D3D3;
+    --font-body: Kadwa; 
+    --font-heading: Julius Sans One; 
+    --font-heading-size: 100px; 
+    --font-body-size: 20px;
+    --font-footer-size: 15px;
+    --space-medium: 2rem; 
+    --divider-spacing: 1rem; }
+main{
+    background-color:var(--color-background);
+    color: var(--color-text);
+    font-family:var(--font-body);
+    font-size: var(--font-body-size);
+    text-align:center;
+    
+}
+
+h1,h2,h3{
+    background-color:var(--color-background);
+    color: var(--color-text);
+    font-family:var(--font-heading);
+    font-size:var(--font-body-size);
+    
+}
+footer{
+    background-color:var(--color-background);
+    color: var(--color-text);
+    font-family:var(--font-heading);
+    font-size:var(--font-footer-size);
+
+}
+button{
+    background-color:var(--color-button);
+    font-size:var(--font-body-size);
+
+}
+
+.orbital-elements{
+    display:grid;
+    grid-template-columns: repeat(5,minmax(0, 1fr));
+    gap: var(--space-medium);
+
+}
+
+.image-display{
+    display:grid;
+    grid-template-columns: repeat(2,minmax(0, 1fr));
+    gap: var(--space-medium);
+
+}
+
+.image-card{
+    display:flex;
+    flex-direction:column;
+
+}
+
+
+.element-card{
+    display:flex;
+    flex-direction:column;
+    border: #000000;
+    border-radius: 1px;
+    background-color: dimgrey;
+
+}
+.nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 5px;
+
+}
+.site-nav{
+    background-color:lightslategray;
+    border-bottom:1px dotted #000000; 
+}
+.site-nav:hover{
+    background-color:darkslategrey
+}
+.site-name{
+    font-weight: 700;
+    font-size: large;
+}
+.nav-inner{
+    width:auto;
+    max-width:auto;
+    margin: 0 auto;
+    padding-block:7px;
+
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 3px;
+
+}
+.container {
+  display: flex;
+  background-color: slategrey;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}

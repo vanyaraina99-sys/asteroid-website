@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <link href="style.css" rel="stylesheet">
+        <nav class="site-nav" aria-label="Main navigation">
+            <div class="nav-inner">
+                <a class="site-name" href="index.html">
+                    Asteroid Visualizer
+                </a>
+
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="economicfeas.html">Economic Feasibility</a>
+                    <a href="aboutme.html">All About Me</a>
+                    <a href="orbitalcitations.html">Citations</a>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <h1>Orbit Calculator</h1>
+            <p1>Now that you have most likely read about asteroid orbits, calculate your own! You can either choose the asteroid that you would like to plot from the drop down menu, or if you already know the elements, or want to make something yourself, you can input custom values using the entry boxes. </p1>
+            <section class="orbital-elements">
+                <div class="element-card">
+                    <h2>Semi-Major Axis</h2>
+                    <p2>The Semi-Major Axis is the longest radius of an elliptical/oval shaped orbit. This element alone defines the size of an elliptical orbit, and calculated how long it'll take an object to finish an orbit around a central body. So, the longer the Semi-Major Axis, the longer the orbital period. The Semi-Major Axis is also equal to the average of the closest point(periapsis) and furthest point(apoapsis) from the host body. At the periapsis, the speed is at it's maximum, exerting the most kinetic energy, and at the apoapsis, it's moving the slowest with the most potential energy.</p2>
+                </div>
+                <div class="element-card">
+                    <h2>Eccentricity</h2>
+                    <p2>The Eccentricity is the dimensionless orbital parameter that defines the shape of an orbit, or more specifically, how close it is to being a perfect circle. An eccentricity of 0 would mean the orbit is a perfect circle, and an eccentricity that falls between zero and one would mean that it is an ellipse. But, if the eccentricity is equal to one, it would be a parabola, and if it's greater than one, it would be a hyperbola. You can calculate it using the formula e=c/a, which is the eccentricity is equal to the distance of the center and a focus point divided by the length of the Semi-Major Axis.</p2>
+                </div>
+                <div class="element-card">
+                    <h2>Inclination</h2>
+                    <p2>The Inclination is the angle between the given orbit and a reference plane(usually Earth's satellites or solar system planets), which is measured from 0-180 degrees.  </p2>
+                </div>
+                <div class="element-card">
+                    <h2>Ascending Node</h2>
+                    <p2>The Ascending Node of an orbit is the point where an orbiting object crosses a reference plane.</p2>
+                </div>
+                <div class="element-card">
+                    <h2>Perihelion</h2>
+                    <p2>Last but not least, the Perihelion is the point where the orbiting object would be closest to the sun, or the part of the orbit itself that is closest to the sun.</p2>
+                </div>
+
+            </section>
+                <p1>Now that you've most likely read about asteroid orbits, calculate your own! You can either choose the asteroid that you would like to plot from the drop down menu, or if you already know the elements or want to make something, you can input custom values using the entry box below.</p1>
+                <label for="asteroidChoices">Asteroid Options</label>
+                <select id="asteroidChoices">
+                <option value="eros">433 Eros
+                </option>
+                <option value="ceres">1 Ceres
+                </option>
+                <option value="psyche">16 Psyche
+                </option>
+                <option value="ida">243 Ida
+                </option>
+                </select>
+                <label for="semiMajorAxis">Semi-major axis a (AU):</label>
+                <input id="semiMajorAxis" type="number" step="0.01" placeholder="Example: 2.5">
+                <label for="eccentricity">Eccentricity</label>
+                <input id="eccentricity" type="number" step="0.01" placeholder="Example: 0.5">
+                <label for="inclination">Inclination</label>
+                <input id="inclination" type="number" step="0.01" placeholder="Example: 10">
+                <label for="ascendingNode">Ascending Node</label>
+                <input id="ascendingNode" type="number" step="0.01" placeholder="Example: 180">
+                <label for="perihelionDegrees">Perihelion Degrees</label>
+                <input id="perihelionDegrees" type="number">
+                <div id="orbitPlot"></div>
+                <p2>To find out these so you can input them, you can check NASA's website linked below</p2>
+                <link href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/">
+                
+                <h2>Press to Calculate!</h2>
+                <button type="button" class="btn btn-secondary" id="calcbutton">Calculate Orbit</button>
+                <button type="button" class="btn btn-primary" id="resetbutton">Reset Values</button>
+                
+
+                <p2 id="resulttext">  </p2>
+            <script src="https://cdn.plot.ly/plotly-3.6.0.min.js" charset="utf-8"></script>
+            <script src="script.js"></script>
+
+        </main>
+    </body>
+</html>
